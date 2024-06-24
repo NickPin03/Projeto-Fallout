@@ -1,0 +1,16 @@
+/* IMP: Apenas classes reutilizáveis aqui - separei em págs diferentes p/ organização apenas, porém não recomendado, gera muita requisição */
+
+.section { 
+    min-height: 100vh;
+}
+
+.white-bg {
+    background-image: url('../images/FundoBranco.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*  .menu-spacing {
+    height: 3.5vh;
+}
+ */
