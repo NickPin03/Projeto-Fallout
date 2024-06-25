@@ -10,7 +10,12 @@
     background-size: cover;
 }
 
-/*  .menu-spacing {
-    height: 3.5vh;
+.main-content {
+    max-width: 120rem; /* 1200px */
+    margin: 0 auto;
+    padding: 10rem var(--gap); /* 100px var(--gap) */
 }
- */
+
+/* .menu-spacing {
+    height: 3.5vh;
+} */
