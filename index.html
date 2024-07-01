@@ -16,68 +16,76 @@
 </head>
 
 <body>
-    <header class="header-main">
-        <h1 class="redRocket-text">Red Rocket</h1>
-        <nav>
-            <ul class="list-content">
-                <li>
-                    <a href="">Home</a>
-                </li>
-                <li>
-                    <a href="">Fallout 76</a>
-                </li>
-                <li>
-                    <a href="">Expansões</a>
-                </li>
-                <li>
-                    <a href="">Comunidade</a>
-                </li>
-            </ul>
-        </nav>
+    <header class="menu">
+        <div class="main-content menu-content">
+            <h1>
+                <a href="#home" class="redRocket-text">Red Rocket</a>
+            </h1>
+            <nav>
+                <ul class="list-content">
+                    <li>
+                        <a href="">Home</a>
+                    </li>
+                    <li>
+                        <a href="">Fallout 76</a>
+                    </li>
+                    <li>
+                        <a href="">Expansões</a>
+                    </li>
+                    <li>
+                        <a href="">Comunidade</a>
+                    </li>
+                </ul>
+            </nav>
 
-        <a href="#" class="purchase-btn">Comprar agora</a>
+            <a href="#" class="purchase-btn">Comprar agora</a>
+        </div>
     </header>
 
-    <main>
         <section id="home" class="home-bg section">
-            <div class="menu-spacing" id="home"></div>
-
-            <img src="./src/images/FalloutLogo 1.png" alt="Descrição da imagem" class="logo-img">
-
-            <div class="redRocket-blueBackground">
-                <img src="./src/images/FalloutBoy.png" alt="Descrição da imagem">
-                <aside class="redRocket-content">
-                    <h2 class="redRocket-text">Red Rocket</h2>
-                    <p class="redRocket-subtitle">A comida ainda está fresca!</p>
-                </aside>
+            <div>
+                <img src="./src/images/FalloutLogo 1.png" alt="Descrição da imagem" class="logo-img">
+                <div class="redRocket-blueBackground">
+                    <img src="./src/images/FalloutBoy.png" alt="Descrição da imagem">
+                    <aside class="redRocket-content">
+                        <h2 class="redRocket-text">Red Rocket</h2>
+                        <p class="redRocket-subtitle">A comida ainda está fresca!</p>
+                    </aside>
+                </div>
             </div>
         </section>
 
-
         <section id="about" class="section white-bg">
+            <div class="menu-spacing" id="about"></div>
             <div class="main-content about-flex">
-                <div class="aboutGame">
+                <div>
+                    <img src="./src/images/Route66.png" class="route66Icon"
+                        alt="Efeito de decoração de placa de trânsito norte-americana da Rota 66">
                     <h2>FALLOUT 4: GAME OF THE YEAR EDITION</h2>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    <p class="section-description">Lorem Ipsum is simply dummy text of the printing and typesetting
+                        industry.
                         Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
                         printer
                         took a galley of type and scram.</p>
-                    <img src="./src/images/18 anos.png" alt="Para maiores de 18 anos">
-                    <a href="">Comprar Agora</a>
+                    <div class="purchaseButtonContent">
+                        <img src="./src/images/18 anos.png" alt="Para maiores de 18 anos">
+                        <a href="" class="yellow-btn">Comprar Agora</a>
+                    </div>
                 </div>
                 <div class="gameShowcase">
+                    <img src="./src/images/NukaColaIcon.png" class="NukaColaIcon"
+                        alt="Broche de decoração da marca de refrigerantes Nuka Cola">
                     <img src="./src/images/TV.png"
                         alt="Televisão dos anos 1950 com imagem de um homem atravessando um terreno desolado por uma bomba nuclear">
                     <div class="gamePlatforms">
-                        <img src="./src/images/Xbox.png" alt="Logo do Xbox">
-                        <img src="./src/images/PcGamer.png" alt="Logo de Pc Gamer">
-                        <img src="./src/images/Ps4.png" alt="Logo do PS4">
+                        <img src="./src/images/Xbox.png" alt="Logo do Xbox" class="platformIconsHeight">
+                        <img src="./src/images/PcGame.png" alt="Logo de Pc Gamer" class="pcGamerIconBorder">
+                        <img src="./src/images/Ps4.png" alt="Logo do PS4" class="platformIconsHeight">
                     </div>
                 </div>
             </div>
         </section>
-    </main>
-
+    
 </body>
 
 </html>

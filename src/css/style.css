@@ -11,15 +11,21 @@ body {
 
 /* HEADER */
 
-.header-main {
+.menu {
     background-color: var(--yellow-color) ;
-    height: 8rem;
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
     position: fixed;
     z-index: 10;
+    top:0;
+}
+
+.menu-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 0;
+    padding-bottom: 0;
+    height: 9vh;
 }
 
 .redRocket-text {
@@ -29,7 +35,7 @@ body {
     text-shadow: 2px 0 #DFDADA, -2px 0 #DFDADA, 0 2px #DFDADA, 0 -2px #DFDADA,
     1px 1px #DFDADA, -1px -1px #DFDADA, 1px -1px #DFDADA, -1px 1px #DFDADA,
    -2px 5px 4px rgba(51, 51, 51, 0.35);
-    min-height: 11.5rem;
+    min-height: 11.5rem; 
 }
 
 .home-bg .redRocket-text {
@@ -45,17 +51,28 @@ nav ul li a {
     padding: 2rem;
     color: var(--black-color);
     font-size: 2.2rem;
+    text-decoration: none;
+}
+
+a.redRocket-text {
+    display: block;
+    text-decoration: none;
 }
 
 .purchase-btn {
-    padding: 12px 44px;
+    padding: 1.2rem 4.4rem;
     border: none;
     border-radius: 5px;
+    text-decoration: none;
     text-align: center;
     font-size: 1.8rem;
     text-transform: uppercase;
-    background-color: #0066B1;
+    background-color: var(--blue-color);
     color: rgba(255, 255, 255, 0.8); 
+}
+
+.section.home-bg {
+    min-height: 91vh;
 }
 
 /* HOME */
@@ -63,10 +80,11 @@ nav ul li a {
 .home-bg {
     background-image: url('../images/FalloutHomeBackground.png');
     background-repeat: no-repeat;
-    background-size: cover; /* Ajuste o percentual conforme necessário */
-    background-position: center top;
+    /* background-size: cover; 
+    background-position: center top; */
     position: relative;
-    width: 100%;
+    background-size: 100vw 92vh;
+    margin-top: 9vh;
     /* display: flex;
     flex-direction: column;
     justify-content: center;
@@ -112,7 +130,52 @@ nav ul li a {
 .about-flex {
     display: flex;
     align-items: center;    /* Opcional: Centraliza os itens no eixo vertical */
-    justify-content: center; /* Opcional: Centraliza os itens no eixo horizontal */
+    gap: 6rem;
+    position: relative;
+    min-height: 100vh;
+}
+
+.gameShowcase {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.purchaseButtonContent {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.purchaseButtonContent img {
+    width: 7.5rem;
+    height: 7.5rem;
+}
+
+.route66Icon {
+    width: 16rem;
+    position: absolute;
+    top: 6%;
+    transform: rotate(-5deg); /* Ajuste o valor conforme necessário */
 }
 
 
+.NukaColaIcon {
+    position: absolute;
+    top: 6.5%;
+    right: 0%;
+}
+
+.gamePlatforms {
+    display: flex;
+    gap: 4rem;
+}
+
+.platformIconsHeight {
+    height: 40px;
+}
+
+.pcGamerIconBorder {
+    border: 1px solid var(--black-color);
+    padding: 0.5rem;
+}
