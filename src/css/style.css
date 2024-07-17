@@ -25,7 +25,7 @@ body {
     justify-content: space-between;
     padding-top: 0;
     padding-bottom: 0;
-    height: 9vh;
+    height: 11rem;
 }
 
 .redRocket-text {
@@ -72,7 +72,7 @@ a.redRocket-text {
 }
 
 .section.home-bg {
-    min-height: 91vh;
+    min-height: 92vh;
 }
 
 /* HOME */
@@ -84,7 +84,7 @@ a.redRocket-text {
     background-position: center top; */
     position: relative;
     background-size: 100vw 92vh;
-    margin-top: 9vh;
+    margin-top: 8vh;
     /* display: flex;
     flex-direction: column;
     justify-content: center;
@@ -122,7 +122,7 @@ a.redRocket-text {
 
 .redRocket-blueBackground img {
     display: block;
-    margin-bottom: -5px; /* Ajuste este valor conforme necessário */
+    margin-bottom: -3px; /* Ajuste este valor conforme necessário */
 }
 
 /* ABOUT */
@@ -155,14 +155,14 @@ a.redRocket-text {
 .route66Icon {
     width: 16rem;
     position: absolute;
-    top: 6%;
+    top: 3rem;
     transform: rotate(-5deg); /* Ajuste o valor conforme necessário */
 }
 
 
 .NukaColaIcon {
     position: absolute;
-    top: 6.5%;
+    top: 3rem;
     right: 0%;
 }
 
@@ -178,4 +178,300 @@ a.redRocket-text {
 .pcGamerIconBorder {
     border: 1px solid var(--black-color);
     padding: 0.5rem;
+}
+
+
+/* ---------------- MEDIA QUERIES ---------------- */
+
+
+/* TELAS DESTKOP MÉDIAS */
+@media (min-width: 1041px) and (max-width: 1200px) {
+
+    /* ABOUT */
+    h2:not(.redRocket-text) {
+        font-size: 4rem;
+    }
+
+    .section-description {
+        font-size: 2rem;
+        margin: 3rem 0rem;
+    }
+
+    .about-flex {
+        gap: 5rem;
+    }
+
+    .route66Icon {
+        top: 6rem;
+        width: 155px;
+    }
+
+    .NukaColaIcon {
+        top: 6rem;
+        width: 155px;
+    }
+
+    .tv {
+        width: 545px;
+    }
+}
+
+
+/* TABLETS E CELULARES */
+@media (max-width: 1040px) {
+
+    /* HEADER */
+     .menu-content {
+        flex-direction: column;
+    }
+
+    nav ul li a, .purchase-btn {
+        visibility: hidden;
+    }      
+
+    /* HOME */
+    .home-bg {
+        background-size: cover; 
+        background-position: center bottom; 
+    } 
+
+    /* ABOUT */
+    .about-flex {
+        flex-direction: column;
+    }
+}
+
+
+/* Ajusta conteúdo sessão redRocket-blueBackground para  o fundo azul não ficar estranho ao trocar de tablets maiores para menores */
+@media (max-width: 825px) { 
+
+    /* HOME */
+    .redRocket-blueBackground {
+        gap: 5rem;
+        align-items: normal;
+        background-color: rgba(0, 102, 177, 0.7); 
+        background-image: none;
+    }
+
+    .redRocket-content {
+        margin-top: 0px;
+    }
+
+    .redRocket-blueBackground img {
+        width: 230px;
+    }
+
+    .home-bg .redRocket-text {
+        font-size: 7.8rem;
+    }
+}
+
+
+/* Tablets (APENAS) */
+@media (min-width: 721px) and (max-width: 1040px) {
+    
+    /* HEADER */
+    .redRocket-text {
+        min-height: 6.5rem;
+    }
+
+    /* HOME */
+    .home-bg .logo-img {
+        width: 500px;
+    }
+
+    /* ABOUT */
+    .yellow-btn {
+        padding: 3.5rem 5rem;
+    }
+
+    .purchaseButtonContent img {
+        width: 9.5rem;
+        height: 9.5rem;
+    }
+
+    #about .main-content {
+        padding: 10rem 9rem;
+    }
+
+    .route66Icon {
+        width: 13rem;
+        top: -3rem;
+    }
+
+    .NukaColaIcon {
+        top: 40.5%;
+        width: 16rem;
+        right: 0%;
+    }
+
+    .gamePlatforms {
+        gap: 3.5rem;
+    }
+ }
+
+ 
+/* Celulares (APENAS) */
+@media (max-width: 720px) {
+
+    /* HEADER --> Utiliza estilo padronizado em tablets */
+    .redRocket-text {
+        min-height: 6.5rem;
+    }
+
+    /* HOME */
+    .home-bg .logo-img {
+        width: 360px;
+    }
+    
+    .redRocket-blueBackground {
+        gap: 2.2rem;
+    }
+
+    .redRocket-blueBackground img {
+        display: block;
+        width: 180px;
+    }
+
+    .home-bg .redRocket-text {
+        font-size: 5.4rem;
+    }
+
+    .redRocket-subtitle {
+        font-size: 2.4rem;
+    }
+
+    /* ABOUT */
+    .route66Icon {
+        top: -2%;
+        width: 10rem;
+    }
+
+    .tv {
+        width: 360px;
+    }
+
+    .NukaColaIcon {
+        width: 12rem;
+        top: 57.5%;
+    }
+
+    .gamePlatforms {
+        gap: 1.5rem;
+    }
+
+    .platformIconsHeight {
+        height: 3rem;
+    }
+
+    img.pcGamerIconBorder {
+        width: 5rem;
+    }
+}
+
+
+/* Celulares Pequenos (APENAS) */
+@media (max-width: 440px) {
+
+    /* HOME */
+    .home-bg .redRocket-text {
+        font-size: 4.4rem;
+    }
+
+    .redRocket-blueBackground {
+        gap: 0.2rem;
+    }
+
+    .redRocket-blueBackground img {
+        width: 170px;
+    }
+}
+
+
+/* Celulares Extra Pequenos (APENAS) */
+@media (max-width: 390px) {
+
+    /* HOME */
+    .home-bg .logo-img {
+        width: 305px;
+    }
+    
+    .redRocket-blueBackground img {
+        width: 150px;
+    }
+
+    .redRocket-subtitle {
+        font-size: 2.2rem;
+    }
+
+    /* ABOUT */
+    h2:not(.redRocket-text) {
+        font-size: 3.5rem;
+    }
+
+    .section-description {
+        font-size: 2rem;
+    }
+
+    .yellow-btn {
+        font-size: 1.4rem;
+        padding: 2.8rem 4rem;
+    }
+
+    .tv {
+        width: 315px;
+    }
+
+    .NukaColaIcon {
+        width: 10rem;
+        top: 56.5%;
+    }
+}
+
+
+/* Celulares Equivalentes Iphone 4 (APENAS) */
+@media (max-width: 360px) {
+
+    /* HEADER */
+    a.redRocket-text {
+        font-size: 3.8rem;
+    }
+
+    .menu-content {
+        height: 8rem;
+    }
+
+    .home-bg .logo-img {
+        width: 280px;
+    }
+
+    /* HOME */
+    .redRocket-blueBackground img {
+        width: 135px;
+    }
+
+    .home-bg .logo-img {
+        width: 280px;
+    }
+
+    .purchaseButtonContent img {
+        width: 6.5rem;
+        height: 6.5rem;
+    }
+
+    .yellow-btn {
+        padding: 2.2rem 2.2rem;
+    }
+
+    .tv {
+        width: 305px;
+    }
+
+    .gamePlatforms {
+        gap: 1.5rem;
+    }
+
+    .platformIconsHeight {
+        height: 2.5rem;
+    }
 }
