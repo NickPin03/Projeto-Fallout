@@ -42,24 +42,25 @@
         </div>
     </header>
 
-        <section id="home" class="home-bg section">
-                <img src="./src/images/FalloutLogo 1.png" alt="Descrição da imagem" class="logo-img">
-                <div class="redRocket-blueBackground">
-                    <img src="./src/images/FalloutBoy.png" alt="Descrição da imagem">
-                    <aside class="redRocket-content">
-                        <h2 class="redRocket-text">Red Rocket</h2>
-                        <p class="redRocket-subtitle">A comida ainda está fresca!</p>
-                    </aside>
-                </div>
+    <main>
+        <section id="home" class="section home-bg">
+            <img src="./src/images/FalloutLogo 1.png" alt="Descrição da imagem" class="logo-img">
+            <div class="redRocket-blueBackground">
+                <img src="./src/images/FalloutBoy.png" alt="Descrição da imagem">
+                <aside class="redRocket-content">
+                    <h2 class="redRocket-text">Red Rocket</h2>
+                    <p class="redRocket-subtitle">A comida ainda está fresca!</p>
+                </aside>
+            </div>
         </section>
 
         <section id="about" class="section white-bg">
             <div class="menu-spacing" id="about"></div>
-            <div class="main-content about-flex">
+            <div class="main-content section-flex">
                 <div>
                     <img src="./src/images/Route66.png" class="route66Icon"
                         alt="Efeito de decoração de placa de trânsito norte-americana da Rota 66">
-                    <h2>FALLOUT 4: GAME OF THE YEAR EDITION</h2>
+                    <h2 class="sectionTitle">FALLOUT 4: GAME OF THE YEAR EDITION</h2>
                     <p class="section-description">Lorem Ipsum is simply dummy text of the printing and typesetting
                         industry.
                         Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
@@ -74,7 +75,8 @@
                     <img src="./src/images/NukaColaIcon.png" class="NukaColaIcon"
                         alt="Broche de decoração da marca de refrigerantes Nuka Cola">
                     <img src="./src/images/TV.png"
-                        alt="Televisão dos anos 1950 com imagem de um homem atravessando um terreno desolado por uma bomba nuclear" class="tv">
+                        alt="Televisão dos anos 1950 com imagem de um homem atravessando um terreno desolado por uma bomba nuclear"
+                        class="tv">
                     <div class="gamePlatforms">
                         <img src="./src/images/Xbox.png" alt="Logo do Xbox" class="platformIconsHeight">
                         <img src="./src/images/PcGame.png" alt="Logo de Pc Gamer" class="pcGamerIconBorder">
@@ -83,7 +85,119 @@
                 </div>
             </div>
         </section>
-    
+
+        <section id="kitchen" class="section kitchen-bg">
+            <img src="./src/images/BalcãoRestaurante.png" alt="" class="restaurantCounter">
+            <img src="./src/images/mrsHand.gif" alt="" class="mrsHandGif">
+            <img src="./src/images/KitchenPosters.png" alt="" class="kitchenPosters">
+            <img src="./src/images/NeonOpenSign.png" alt="" class="neonOpenSign">
+        </section>
+
+        <section id="music" class="section white-bg">
+            <div class="menu-spacing" id="music"></div>
+            <div class="main-content section-flex">
+                <div class="musicPlayer">
+                    <img src="./src/images/FalloutDisco.png" class="falloutDiscoIcon" alt="">
+                    <h2 class="sectionTitle">FALLOUT FM</h2>
+                        <img src="./src/images/musicImg/falloutDisco1.png" class="discoIcon" alt="">
+                        <div class="description">
+                            <h3 class="musicName">Nome da música</h3>
+                            <i class="artistName">Nome do artista</i>
+                        </div>
+                        <div class="duration">
+                            <div class="timeBar">
+                                <progress value="0" max="1"></progress>
+                                <div class="pointer"></div>
+                            </div>
+                            <div class="time">
+                                <p class="inicio">0:00</p>
+                                <p class="fim">3:40</p>
+                            </div>
+                        </div>
+                        <div class="player">
+                            <i class="fa-solid fa-backward arrow previous"></i>
+                            <i class="fa-solid fa-circle-play btnPlay"></i>
+                            <i class="fa-solid fa-circle-pause btnStop"></i>
+                            <i class="fa-solid fa-forward arrow next"></i>
+                        </div>
+                        <audio src="./music/01. Maybe.mp3"></audio>
+                        <script src="src/js/musicPlayer.js"></script>
+                        <img src="./src/images/falloutDiscoSinging.png" class="falloutBoySinging" alt="">
+                </div>
+                <div>
+                    <img src="./src/images/MusicalNotes.png" class="musicalNoteIcon" alt="">
+                    <img src="./src/images/JunkBox.png" class="junkBox" alt="">
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="footer" class="blueBackground">
+        <div class="main-content">
+            <img src="./src/images/FalloutFooter.png" class="falloutLogoFooter" alt="">
+            <div class="whiteLine"></div>
+            <div class="footerContentFlex">
+                <div class="aboutCollaborators">
+                    <h2>Equipe</h2>
+                    <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
+                        classical Latin literate.</p>
+                </div>
+                <div>
+                    <h2>Nos siga</h2>
+                    <div class="collaboratorsFlex">
+                        <div>
+                            <h3>Nicolas</h3>
+                            <a href="https://fontawesome.com/search?q=linkedin&o=r">
+                                <i class="fa-brands fa-github btnGithub"></i>
+                            </a>
+                            <a href="https://portfolio.fateclins.edu.br/~1920832111014/#">
+                                <i class="fa-brands fa-linkedin"></i>
+                            </a>
+                        </div>
+                        <div>
+                            <h3>Matheus</h3>
+                            <a href="">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                            <a href="">
+                                <i class="fa-brands fa-linkedin btnLinkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h2>Links rápidos</h2>
+                    <nav>
+                        <ul>
+                            <li>
+                                <a href="">Home</a>
+                            </li>
+                            <li>
+                                <a href="">Sobre</a>
+                            </li>
+                            <li>
+                                <a href="">Música</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="footerCertifiedsFlex">
+                <div class="footerCertifieds">
+                    <img src="./src/images/privacyESRB.png" alt="">
+                    <img src="./src/images/18 anos.png" alt="">
+                </div>
+                <div>
+                    <h2 class="redRocket-text">Red Rocket</h2>
+                </div>
+            </div>
+            <div class="whiteLine"></div>
+            <p class="copyrightText">Copyright @2024 Todos os direitos reservados.</p>
+        </div>
+    </footer>
 </body>
+
+<script src="https://kit.fontawesome.com/f990859830.js" crossorigin="anonymous"></script>
 
 </html>

@@ -28,16 +28,6 @@ body {
     height: 11rem;
 }
 
-.redRocket-text {
-    font-family: 'Dash Horizon', sans-serif;
-    font-size: 4.6rem;
-    color: var(--red-color);
-    text-shadow: 2px 0 #DFDADA, -2px 0 #DFDADA, 0 2px #DFDADA, 0 -2px #DFDADA,
-    1px 1px #DFDADA, -1px -1px #DFDADA, 1px -1px #DFDADA, -1px 1px #DFDADA,
-   -2px 5px 4px rgba(51, 51, 51, 0.35);
-    min-height: 10.8rem; 
-}
-
 .home-bg .redRocket-text {
     font-size: 9.5rem;
 }
@@ -127,9 +117,10 @@ a.redRocket-text {
 
 /* ABOUT */
 
-.about-flex {
+.section-flex {
     display: flex;
     align-items: center;    /* Opcional: Centraliza os itens no eixo vertical */
+    justify-content: center;
     gap: 6rem;
     position: relative;
     min-height: 100vh;
@@ -156,9 +147,9 @@ a.redRocket-text {
     width: 16rem;
     position: absolute;
     top: 3rem;
+    left: 0%;
     transform: rotate(-5deg); /* Ajuste o valor conforme necessário */
 }
-
 
 .NukaColaIcon {
     position: absolute;
@@ -180,7 +171,234 @@ a.redRocket-text {
     padding: 0.5rem;
 }
 
+/* KITCHEN */
+
+.kitchen-bg {
+    background-image: url('../images/FundoCozinhaMedio.png');
+    background-repeat: no-repeat;
+    background-size: 102vw 100%;
+    position: relative;
+}
+
+.section.kitchen-bg {
+    min-height: 1000px;
+    z-index: 5;
+}
+
+.restaurantCounter {
+    position: absolute;
+    top: 62%;
+    left: 50%;
+    width: 60vw;
+    height: 55vh;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    min-height: 400px;
+}
+
+.mrsHandGif {
+    position: absolute;
+    top: 26%;
+    left: 30%;
+    width: 23vw;
+    height: 45vh;
+    z-index: 1;
+    min-height: 400px;
+}
+
+.kitchenPosters {
+    position: absolute;
+    top: 3%;
+    right: 0%;
+    width: 28vw;
+    height: 35vh;
+    min-height: 255px;
+}
+
+.neonOpenSign {
+    width: 14vw;
+}
+
+/* MUSIC */
+
+#music .section-flex {
+    gap: 24rem;
+}
+
+.falloutDiscoIcon {
+    width: 15rem;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+}
+
+.musicalNoteIcon {
+    width: 15rem;
+    position: absolute;
+    top: 0%;
+    right: 0%;
+}
+
+.musicPlayer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.description {
+    margin-bottom: 1rem;
+    max-width: 30rem;
+}
+
+.musicName{
+    font-size: 2.8rem;
+}
+
+.artistName{
+    font-size: 2.2rem;
+}
+
+.time {
+    display: flex;
+    margin-top: 1rem;
+    justify-content: space-between;
+}
+
+.timeBar {
+    width: 300px;
+    height: 65px;
+    border-radius: 5px;
+    display: flex;
+    align-items: flex-start;
+    background-image: url('../images/radioSynthesizer.png');
+    background-repeat: no-repeat;
+}
+
+progress {
+    height: 52px;
+    width: 0%;
+    visibility: hidden;
+}
+
+.pointer {
+    width: 5px;
+    height: 54px;
+    background-color: red;
+    transform: translateY(-20%);
+}
+
+.player {
+    width: 300px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.btnPlay, .btnStop{
+    font-size: 6.5rem;
+    color: var(--yellow-color);
+    cursor: pointer;
+}
+
+.btnStop {
+    display: none;/* por no JS depois */
+}
+
+.arrow {
+    font-size: 4.5rem;
+    cursor: pointer;
+}
+
+.falloutBoySinging {
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 18rem;
+}
+
+/* FOOTER */
+
+.blueBackground {
+    background-color: var(--blue-color);
+    color: var(--white-color);
+}
+
+.whiteLine {
+    width: 100%;
+    height: 0.01rem;
+    background-color: var(--white-color);
+}
+
+footer div.main-content {
+    position: relative;
+    padding: 6rem 1rem; /* 100px var(--gap) */
+}
+
+.falloutLogoFooter {
+    padding: 2rem 0rem;
+}
+
+.footerContentFlex {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr 1fr;
+    gap: 10rem;
+    padding: 4rem 0rem;
+}
+
+.aboutCollaborators p, .collaboratorsFlex, footer nav ul li a  {
+    font-family: 'FuturaT Ligh', sans-serif;
+    font-size: 2rem;
+    display: flex;
+    padding: 2rem 0rem 0rem 0rem;
+    gap: 12rem;
+    color: var(--white-color);
+    text-align: justify;
+}
+
+.socialBtnBackground {
+    width: 5rem;
+    height: 5rem;
+}
+
+.collaboratorsFlex a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white-color);
+    font-size: 4rem;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 2rem;
+    margin: 2rem 2rem 2rem 0rem; ;
+}
+
+.footerCertifieds {
+    position: absolute;
+    right: 1rem;
+    bottom: 13.5rem;
+}
+
+.footerCertifieds img {
+    height: 10rem;
+}
+
+footer .redRocket-text, .copyrightText {
+    text-align: center;
+}
+
+footer .redRocket-text {
+    margin-top: 6rem;
+}
+
+.copyrightText {
+    padding-top: 2rem;
+    font-size: 2.1rem;
+    font-weight: 400;
+}
+
 /* ---------------- MEDIA QUERIES ---------------- */
+
 
 /* Ajusta conteúdo sessão redRocket-blueBackground para  o fundo azul não ficar estranho ao trocar de tablets maiores para menores */
 @media (max-width: 825px) {
@@ -240,11 +458,7 @@ a.redRocket-text {
     }
   
     /* ABOUT */
-    .about-flex.main-content {
-        padding: 10rem 2rem;
-    }
-
-    h2:not(.redRocket-text) {
+    .sectionTitle {
         font-size: 4rem;
     }
 
@@ -258,7 +472,9 @@ a.redRocket-text {
     }
 
     .yellow-btn {
-        padding: 2rem 2.2rem;
+        padding: 2rem 2rem;
+        width: 20rem;
+        font-size: 1.8rem;
     }
 
     .tv {
@@ -267,6 +483,7 @@ a.redRocket-text {
 
     .route66Icon {
         top: -2%;
+        left: 0%;
         width: 10rem;
     }
 
@@ -286,6 +503,91 @@ a.redRocket-text {
     .platformIconsHeight {
         height: 2.5rem;
     }
+
+     /* KITCHEN */
+     .section.kitchen-bg {
+        min-height: 100vh;
+    }
+
+    .kitchenPosters {
+        position: absolute;
+        top: 8%;
+        right: 0%;
+        width: 54vw;
+        height: 32vh;
+        min-height: 250px;
+    }
+
+    .neonOpenSign {
+        width: 28vw;
+    }
+
+    .kitchen-bg {
+        background-image: url(../images/FundoCozinhaPequeno.png);
+        background-size: 170vw 100%;
+    }
+
+    .mrsHandGif {
+        top: 25%;
+        left: 9%;
+        width: 50vw;
+        height: 44vh;
+    }
+
+    .restaurantCounter {
+        top: 60%;
+        width: 99vw;
+        height: 35vh;
+    }
+
+    /* MUSIC */
+    .falloutDiscoIcon {
+         width: 10rem;
+         position: absolute;
+         top: 0%;
+         left: 0%;
+    }
+
+    .junkBox {
+        width: 25rem;
+    }
+
+    .musicalNoteIcon {
+        width: 10rem;
+        position: absolute;
+        top: 57%;
+        right: 4%;
+    }
+
+    .discoIcon {
+        width: 22rem;
+    }
+
+    /* FOOTER */
+    footer div.main-content {
+        padding: 4rem 2rem;
+    }
+
+    .footerContentFlex {
+        display: flex;
+        flex-direction: column;
+        gap: 6rem;
+    }
+
+    .footerCertifiedsFlex {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footerCertifieds {
+        display: inline;
+        position: initial;
+    }
+
+    .footerCertifieds img {
+        height: 8rem;
+    }
+
 }
 
 /* Celulares Pequenos até Médios (APENAS) */
@@ -314,7 +616,7 @@ a.redRocket-text {
     }
 
     /* ABOUT */
-    h2:not(.redRocket-text) {
+    .sectionTitle {
         font-size: 4.4rem;
     }
 
@@ -328,16 +630,19 @@ a.redRocket-text {
 
     .route66Icon {
         top: -2%;
+        left: 4%;
         width: 10rem;
     }
 
     .NukaColaIcon {
-        width: 12rem;
+        width: 10rem;
         top: 56.5%;
     }
 
     .yellow-btn {
         padding: 2.5rem 2rem;
+        width: 20rem;
+        font-size: 1.8rem;
     }
 
     .gamePlatforms {
@@ -350,6 +655,93 @@ a.redRocket-text {
 
     img.pcGamerIconBorder {
         width: 5rem;
+    }
+
+    /* KITCHEN */
+    .section.kitchen-bg {
+        min-height: 100vh;
+    }
+
+    .kitchenPosters {
+        position: absolute;
+        top: 6%;
+        right: 0%;
+        width: 58vw;
+        height: 30vh;
+        min-height: 230px;
+    }
+
+    .neonOpenSign {
+        position: absolute;
+        top: 6%;
+        width: 28vw;
+    }
+
+    .kitchen-bg {
+        background-size: 170vw 100%;
+    }
+
+    .mrsHandGif {
+        top: 26%;
+        left: 9%;
+        width: 50vw;
+        height: 40vh;
+        min-height: 350px;
+    }
+
+    .restaurantCounter {
+        top: 60%;
+        width: 90vw;
+        height: 34vh;
+        min-height: 350px;
+    }
+
+    /* MUSIC */
+    .falloutDiscoIcon {
+        width: 12rem;
+        position: absolute;
+        top: 0%;
+        left: 0%;
+    }
+
+    .musicalNoteIcon {
+        width: 12rem;
+        position: absolute;
+        top: 55%;
+        right: 4%;
+    }
+
+    .discoIcon {
+        width: 25rem;
+    }
+
+    .junkBox {
+        width: 92%;
+    }
+
+    /* FOOTER */
+    footer div.main-content {
+        padding: 6rem 3rem;
+    }
+
+    .footerContentFlex {
+        display: flex;
+        flex-direction: column;
+        gap: 6rem;
+    }
+
+    .footerCertifiedsFlex {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footerCertifieds {
+        display: inline;
+        position: initial;
+    }
+
+    .footerCertifieds img {
+        height: 8rem;
     }
 }
 
@@ -388,14 +780,26 @@ a.redRocket-text {
         width: 420px;
     }
 
+    .yellow-btn {
+        padding: 3rem 2.5rem;
+        width: 23rem;
+    }
+
+    .purchaseButtonContent img {
+        width: 8.5rem;
+        height: 8.5rem;
+    }
+
     .route66Icon {
         top: -2%;
+        left: 4%;
         width: 10rem;
     }
 
     .NukaColaIcon {
         width: 12rem;
         top: 50.5%;
+        right: 0%;
     }
 
     .gamePlatforms {
@@ -408,6 +812,86 @@ a.redRocket-text {
 
     img.pcGamerIconBorder {
         width: 6.5rem;
+    }
+
+     /* KITCHEN */
+     .section.kitchen-bg {
+        min-height: 100vh;
+    }
+
+    .kitchenPosters {
+        position: absolute;
+        top: 5%;
+        right: 0%;
+        width: 58vw;
+        height: 30vh;
+        min-height: 235px;
+    }
+
+    .neonOpenSign {
+        width: 28vw;
+    }
+
+    .kitchen-bg {
+        background-size: 170vw 100%;
+    }
+
+    .mrsHandGif {
+        top: 26%;
+        left: 16%;
+        width: 40vw;
+        height: 40vh;
+    }
+
+    .restaurantCounter {
+        top: 60%;
+        width: 90vw;
+        height: 35vh;
+    }
+
+    /* MUSIC */
+    .falloutDiscoIcon {
+        width: 12rem;
+        position: absolute;
+        top: 0%;
+        left: 4%;
+    }
+
+    .musicalNoteIcon {
+        width: 12rem;
+        position: absolute;
+        top: 52%;
+        right: 4%;
+    }
+
+    /* FOOTER */
+
+    footer div.main-content {
+        padding: 6rem 3rem;
+    }
+
+    .footerContentFlex {
+        display: flex;
+        flex-direction: column;
+        gap: 6rem;
+    }
+
+    .footerCertifiedsFlex {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footerCertifieds {
+        display: inline;
+        position: initial;
+    }
+
+    .footerCertifieds img {
+        height: 8rem;
+    }
+
+    footer .redRocket-text {
+        margin: 3rem 0rem;
     }
 }
 
@@ -430,7 +914,7 @@ a.redRocket-text {
     }
 
     .yellow-btn {
-        padding: 3.5rem 5rem;
+        padding: 3.5rem 3rem;
     }
 
     .purchaseButtonContent img {
@@ -441,6 +925,7 @@ a.redRocket-text {
     .route66Icon {
         width: 13rem;
         top: -3rem;
+        left: 4%;
     }
 
     .NukaColaIcon {
@@ -452,9 +937,73 @@ a.redRocket-text {
     .gamePlatforms {
         gap: 3.5rem;
     }
+
+    /* KITCHEN */
+    .section.kitchen-bg {
+        min-height: 100vh;
+    }
+
+    .kitchenPosters {
+        position: absolute;
+        top: 3%;
+        right: 0%;
+        width: 50vw;
+        height: 32vh;
+        min-height: 255px;
+    }
+
+    .neonOpenSign {
+        width: 20vw;
+    }
+
+    .kitchen-bg {
+        background-size: 170vw 100%;
+    }
+
+    .mrsHandGif {
+        top: 20%;
+        left: 18%;
+        width: 35vw;
+        height: 50vh;
+    }
+
+    .restaurantCounter {
+        top: 60%;
+        width: 90vw;
+        height: 50vh;
+    }
+
+    /* MUSIC */
+    .falloutDiscoIcon {
+        width: 14rem;
+        position: absolute;
+        top: 0%;
+        left: 4%;
+    }
+
+    .musicalNoteIcon {
+        width: 14rem;
+        position: absolute;
+        top: 52%;
+        right: 4%;
+    }
+
+    /* FOOTER */
+    .footerContentFlex {
+        display: grid;
+        gap: 6rem;
+    }
+
+    footer .redRocket-text {
+        margin: 3rem 0rem;
+    }
+
+    .aboutCollaborators p, .collaboratorsFlex, footer nav ul li a {
+        gap: 6rem;
+    }
 }
 
-/* TABLETS E CELULARES (TODOS) */
+/* Tablets e Celulares (TODOS) */
 @media (max-width: 991px) {
 
     /* HEADER */
@@ -462,7 +1011,7 @@ a.redRocket-text {
         flex-direction: column;
     }
 
-    nav ul li a, .purchase-btn {
+    .list-content, .purchase-btn {
         visibility: hidden;
     }
 
@@ -472,16 +1021,30 @@ a.redRocket-text {
         background-position: center bottom;
     }
 
-    .about-flex {
+    .section-flex {
         flex-direction: column;
     }
+
+     /* MUSIC */
+    #music .section-flex {
+        gap: 15rem;
+    }
+
+    #music .sectionTitle {
+        margin-top: 2rem;
+    }
+
+    .falloutBoySinging {
+        width: 18rem;
+    }
+
 }
 
 /* Telas Desktop Pequenas (APENAS) */
 @media (min-width: 992px) and (max-width: 1200px) {
    
     /* ABOUT */
-    h2:not(.redRocket-text) {
+    .sectionTitle {
         font-size: 3.8rem;
     }
 
@@ -490,7 +1053,7 @@ a.redRocket-text {
         margin: 3rem 0rem;
     }
 
-    .about-flex {
+    .section-flex {
         gap: 5rem;
     }
 
@@ -509,6 +1072,66 @@ a.redRocket-text {
     }
 
     .yellow-btn {
-        padding: 2.5rem 3.5rem;
+        padding: 2.5rem 2.5rem;
+    }
+
+    /* KITCHEN */
+    .section.kitchen-bg {
+        min-height: 100vh;
+    }
+
+    .kitchenPosters {
+        position: absolute;
+        top: 3%;
+        right: 0%;
+        width: 40vw;
+        height: 32vh;
+        min-height: 255px;
+    }
+
+    .neonOpenSign {
+        width: 20vw;
+    }
+
+    .mrsHandGif {
+        top: 20%;
+        left: 24%;
+        width: 28vw;
+        height: 50vh;
+    }
+
+    .restaurantCounter {
+        top: 60%;
+        width: 70vw;
+        height: 50vh;
+    }
+
+    /* MUSIC */
+    .falloutDiscoIcon {
+        width: 13rem;
+    }
+
+    .musicalNoteIcon {
+        width: 13rem;
+    }
+
+    #music .section-flex {
+        gap: 15rem;
+    }
+
+    #music .sectionTitle {
+        margin-top: 2rem;
+    }
+    
+    /* FOOTER */
+    .aboutCollaborators p, .collaboratorsFlex, footer nav ul li a {
+        gap: 6rem;
+    }
+}
+
+/* Em telas menores que 805px é bloqueado o diminuimento da sessão da cozinha, para que as imagens não respeitem 100vh e para que não encolha demais a sessão */
+@media (max-height: 805px) {
+    .section.kitchen-bg {
+        min-height: 805px; /* Altura mínima em pixels para telas menores */
     }
 }
