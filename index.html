@@ -12,34 +12,31 @@
     <link rel="stylesheet" href="./src/css/reset.css">
     <link rel="stylesheet" href="./src/css/variables.css">
     <link rel="stylesheet" href="./src/css/classes.css">
-    <link rel="stylesheet" href="./src/css/style.css">
+    <link rel="stylesheet" href="./src/css/styles.css">
 </head>
 
 <body>
-    <header class="menu">
-        <div class="main-content menu-content">
-            <h1>
-                <a href="#home" class="redRocket-text">Red Rocket</a>
-            </h1>
-            <nav>
-                <ul class="list-content">
-                    <li>
-                        <a href="">Home</a>
-                    </li>
-                    <li>
-                        <a href="">Fallout 76</a>
-                    </li>
-                    <li>
-                        <a href="">Expansões</a>
-                    </li>
-                    <li>
-                        <a href="">Comunidade</a>
-                    </li>
+    <!-- <input type="checkbox" id="check">
+    <label for="check" class="menu-icon">
+    </label> -->
+    <header>
+        <nav class="menu">
+            <div class="main-content menu-content">
+                <h1>
+                    <a href="#home" class="redRocket-text">Red Rocket</a>
+                </h1>
+                <button class="menu-icon" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-list">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <ul class="list-content" id="menu-list">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#fallout76">Fallout 76</a></li>
+                    <li><a href="#expansions">Expansões</a></li>
+                    <li><a href="#community">Comunidade</a></li>
+                    <li><a href="#purchase" class="purchase-btn">Comprar agora</a></li>
                 </ul>
-            </nav>
-
-            <a href="#" class="purchase-btn">Comprar agora</a>
-        </div>
+            </div>
+        </nav>
     </header>
 
     <main>
@@ -199,5 +196,6 @@
 </body>
 
 <script src="https://kit.fontawesome.com/f990859830.js" crossorigin="anonymous"></script>
+<script src="./src/js/menu.js"></script>
 
 </html>

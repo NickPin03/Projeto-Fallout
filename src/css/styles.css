@@ -23,9 +23,15 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
     padding-top: 0;
     padding-bottom: 0;
     height: 11rem;
+}
+
+.menu-icon {
+    visibility: hidden;
+    position: absolute;
 }
 
 .home-bg .redRocket-text {
@@ -38,7 +44,7 @@ body {
 
 nav ul li a {
     display: block;
-    padding: 2rem;
+    padding: 1rem 2rem;
     color: var(--black-color);
     font-size: 2.2rem;
     text-decoration: none;
@@ -399,6 +405,94 @@ footer .redRocket-text {
 
 /* ---------------- MEDIA QUERIES ---------------- */
 
+/* Tablets e Celulares (TODOS) */
+@media (max-width: 991px) {
+
+    /* HEADER */
+    .menu-content {
+        justify-content: center;
+        align-items: unset;
+    }
+
+    .menu-icon {
+        background: none;
+        border: none;
+        padding: 0;      
+        margin: 0;      
+        cursor: pointer;  
+        display: inline-block;
+        position: absolute;
+        visibility: visible;
+        left: 4rem;
+        top: 4rem;
+    }
+
+    .menu-icon i {
+        font-size: 3rem;       
+        color: var(--blue-color);    
+    }
+
+    .menu-content ul {
+        position: absolute;
+        top: 11rem;
+        width: 100vw;
+        right: 0;
+        height: calc(100vh - 11rem);
+        background-color: var(--blue-color);
+        opacity: 98%;
+        overflow-y: auto;
+        display: block;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li a {
+        color: var(--white-color);
+        font-size: 3.2rem;
+    }
+
+    .menu-content ul li {
+        padding: 2rem;
+    }
+
+    .purchase-btn {
+        background-color: var(--yellow-color);
+        color: var(--black-color);
+    }
+
+    .list-content {
+       visibility: hidden;
+    }
+    
+    .list-content.open {
+       visibility: visible; /* Exibir o menu quando a classe 'open' estiver presente */
+    }
+
+    /* HOME */
+    .home-bg {
+        background-size: cover;
+        background-position: center bottom;
+    }
+
+    .section-flex {
+        flex-direction: column;
+    }
+
+     /* MUSIC */
+    #music .section-flex {
+        gap: 15rem;
+    }
+
+    #music .sectionTitle {
+        margin-top: 2rem;
+    }
+
+    .falloutBoySinging {
+        width: 18rem;
+    }
+
+}
 
 /* Ajusta conteúdo sessão redRocket-blueBackground para  o fundo azul não ficar estranho ao trocar de tablets maiores para menores */
 @media (max-width: 825px) {
@@ -432,6 +526,15 @@ footer .redRocket-text {
 
     .menu-content {
         height: 8rem;
+    }
+
+    .menu-icon::after {
+        top: 2.5rem;
+    }
+
+    .menu-content ul {
+        top: 8rem;
+        height: calc(100vh - 8rem);
     }
 
     /* HOME */
@@ -1001,43 +1104,6 @@ footer .redRocket-text {
     .aboutCollaborators p, .collaboratorsFlex, footer nav ul li a {
         gap: 6rem;
     }
-}
-
-/* Tablets e Celulares (TODOS) */
-@media (max-width: 991px) {
-
-    /* HEADER */
-    .menu-content {
-        flex-direction: column;
-    }
-
-    .list-content, .purchase-btn {
-        visibility: hidden;
-    }
-
-    /* HOME */
-    .home-bg {
-        background-size: cover;
-        background-position: center bottom;
-    }
-
-    .section-flex {
-        flex-direction: column;
-    }
-
-     /* MUSIC */
-    #music .section-flex {
-        gap: 15rem;
-    }
-
-    #music .sectionTitle {
-        margin-top: 2rem;
-    }
-
-    .falloutBoySinging {
-        width: 18rem;
-    }
-
 }
 
 /* Telas Desktop Pequenas (APENAS) */
