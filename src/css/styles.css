@@ -74,7 +74,7 @@ a.redRocket-text {
 /* HOME */
 
 .home-bg {
-    background-image: url('../images/FalloutHomeBackground.png');
+    background-image: url('../images/FalloutMenuBackgroundDirt.png');
     background-repeat: no-repeat;
     /* background-size: cover; 
     background-position: center top; */
@@ -175,6 +175,117 @@ a.redRocket-text {
 .pcGamerIconBorder {
     border: 1px solid var(--black-color);
     padding: 0.5rem;
+}
+
+/* SLIDER */
+
+.slider {
+    max-width: 100rem;
+    margin: 3rem auto;
+    width: 80vw;
+    height: 50rem;
+    overflow: hidden;
+    position: relative;
+    border: 2px solid var(--red-color);
+    border-radius: 0.4rem;
+}
+
+.slides {
+    width: 400%; /* tamanho da div pai que irá ter todos os slides */
+    height: 50rem;
+    display: flex; /* para que as imagens fiquem uma ao lado da outra para serem reveladas */
+    position: relative;
+}
+
+.slides input {
+    display: none;
+}
+
+.slide {
+    width: 25%;  /* tamanho de cada div slide em relação a div pai "slides". Tamanho de 25% para que as 4 imagens sejam dividas igualmente resultando em 100% no total */
+    position: relative;
+    transition: 2s;
+}
+
+.slide img { 
+    width: 80vw; /* Arrumo o tamanho da imagem para que esta caiba no espaço da div slide */
+    height: 50rem;
+}
+
+.manual-navigation {
+    position: absolute; /* Por padrão esta div está em baixo do carrosel, uso absolute como se fosse z-index para ficar acima da img e margin top negativa para trazer para dentro da imagem*/
+    width: 100%;
+    margin-top: -6rem;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn {
+    border: 0.2rem solid var(--white-color);
+    padding: 0.5rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.manual-btn:not(:last-child) {
+    margin-right: 40px; /* aplica margem a direita a todos os botões menos no último  */
+}
+
+.manual-btn:hover {
+    background-color: var(--white-color);
+}
+
+#radio1:checked ~ .first{ /* seleciona o irmão do elemento radio, que venha depois, no caso a div com a classe first. Por que isso? Pois se estiver ativo e for o primeiro, quero que começe no primeiro slide */
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first {
+    margin-left: -25%; /* leva 25% a menos para esquerda, como se estivesse deslocando a imagem negativamente para que a próxima apareça, como se fosse uma fita de imagens*/
+}
+
+#radio3:checked ~ .first {
+    margin-left: -50%; 
+}
+
+#radio4:checked ~ .first {
+    margin-left: -75%; 
+}
+
+.navigation-auto div {
+    border: 0.2rem solid var(--blue-color);
+    padding: 0.5rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.navigation-auto {
+    position: absolute;
+    width: 25%;
+    margin-top: 44rem;
+    display: flex;
+    justify-content: center;
+}
+
+.navigation-auto div:not(:last-child) {
+    margin-right: 4rem;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1 {
+    background-color: var(--white-color);
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2 {
+    background-color: var(--white-color);
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3 {
+    background-color: var(--white-color);
+}
+
+#radio4:checked ~ .navigation-auto .auto-btn4 {
+    background-color: var(--white-color);
 }
 
 /* KITCHEN */
@@ -415,29 +526,65 @@ footer .redRocket-text {
     }
 
     .menu-icon {
-        background: none;
-        border: none;
-        padding: 0;      
-        margin: 0;      
-        cursor: pointer;  
-        display: inline-block;
+        width: 4.5rem;
+        height: 32px;
         position: absolute;
+        top: 3.5rem;
+        left: 3rem;
+        border: none;
+        padding: 0;
         visibility: visible;
-        left: 4rem;
-        top: 4rem;
+        background-color: unset;
     }
 
-    .menu-icon i {
-        font-size: 3rem;       
-        color: var(--blue-color);    
+    .icon {
+        width: 40px;
+        height: 4px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: var(--blue-color);
+        transition: .3s ease-in;
     }
 
-    .menu-content ul {
+    .icon::before, .icon::after {
+        content: '';
+        width: 40px;
+        height: 4px;
+        position: absolute;
+        background-color: var(--blue-color);
+        left: 0;
+        transition: .3s ease-in;
+    }
+
+    .icon::after {
+        top: 10px;
+    }
+
+    .icon::before {
+        top: -10px;
+    }
+
+    .menu-icon[aria-expanded="true"] .icon {
+        background: transparent;
+        box-shadow: none;
+    }
+    
+    .menu-icon[aria-expanded="true"] .icon::before {
+        top: 0;
+        transform: rotate(45deg);
+    }
+    
+    .menu-icon[aria-expanded="true"] .icon::after {
+        top: 0;
+        transform: rotate(135deg);
+    }
+    
+    .list-content {
         position: absolute;
         top: 11rem;
-        width: 100vw;
-        right: 0;
-        height: calc(100vh - 11rem);
+        width: 100%;      
         background-color: var(--blue-color);
         opacity: 98%;
         overflow-y: auto;
@@ -445,6 +592,16 @@ footer .redRocket-text {
         display: flex;
         flex-direction: column;
         align-items: center;
+        height: 0;
+        opacity: 0;
+        overflow: hidden;
+        transition: height 0.6s ease, opacity 0.6s ease;
+    }
+
+    .list-content.open {
+        height: calc(100vh - 11rem); /* Definir um valor suficiente para acomodar o conteúdo */
+        opacity: 0.98;
+        overflow-y: auto;
     }
 
     nav ul li a {
@@ -459,14 +616,6 @@ footer .redRocket-text {
     .purchase-btn {
         background-color: var(--yellow-color);
         color: var(--black-color);
-    }
-
-    .list-content {
-       visibility: hidden;
-    }
-    
-    .list-content.open {
-       visibility: visible; /* Exibir o menu quando a classe 'open' estiver presente */
     }
 
     /* HOME */
@@ -519,6 +668,15 @@ footer .redRocket-text {
 /* Celulares Extra Pequenos (APENAS) */
 @media (max-width: 360px) {
 
+    .menu-icon {
+        top: 2.5rem;
+        left: 2rem;
+    }
+
+    .list-content.open {
+        height: calc(100vh - 8rem);
+    }
+
     /* HEADER */
     a.redRocket-text {
         font-size: 3.8rem;
@@ -534,7 +692,7 @@ footer .redRocket-text {
 
     .menu-content ul {
         top: 8rem;
-        height: calc(100vh - 8rem);
+        /* height: calc(100vh - 8rem); */
     }
 
     /* HOME */
@@ -607,7 +765,16 @@ footer .redRocket-text {
         height: 2.5rem;
     }
 
-     /* KITCHEN */
+    /* SLIDER */
+
+    .slide img {
+        width: 54rem;
+        height: 50rem;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    /* KITCHEN */
      .section.kitchen-bg {
         min-height: 100vh;
     }
@@ -758,6 +925,13 @@ footer .redRocket-text {
 
     img.pcGamerIconBorder {
         width: 5rem;
+    }
+
+    /* SLIDER */
+    .slide img {
+        height: 50rem;
+        object-fit: cover;
+        object-position: center;
     }
 
     /* KITCHEN */
@@ -917,6 +1091,13 @@ footer .redRocket-text {
         width: 6.5rem;
     }
 
+    /* SLIDER */
+
+    .slide img {
+        width: 120vw;
+        height: 50rem;
+    }
+    
      /* KITCHEN */
      .section.kitchen-bg {
         min-height: 100vh;
@@ -1004,7 +1185,7 @@ footer .redRocket-text {
     /* HEADER */
     .redRocket-text {
         min-height: 6.5rem;
-    }
+}
 
     /* HOME */
     .home-bg .logo-img {
@@ -1012,9 +1193,10 @@ footer .redRocket-text {
     }
 
      /* ABOUT */
-    #about .main-content {
+    /*  #about .main-content {
         padding: 10rem 9rem;
     }
+    */
 
     .yellow-btn {
         padding: 3.5rem 3rem;
