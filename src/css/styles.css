@@ -9,38 +9,6 @@ body {
     font-size: 2rem; /* Usamos rem como pixel, equivale 16px */
 }
 
-@font-face {
-    font-family: 'Dash Horizon';
-    src: url('/src/fonts/DashHorizon.woff2') format('woff2'),
-         url('/src/fonts/DashHorizon.woff') format('woff'),
-         url('/src/fonts/DashHorizon.ttf') format('truetype');
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Futura Bold';
-    src: url('/src/fonts/Futura-Bold.woff2') format('woff2'),
-         url('/src/fonts/Futura-Bold.woff') format('woff'),
-         url('/src/fonts/Futura-Bold.ttf') format('truetype');
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Futura Medium';
-    src: url('/src/fonts/Futura-Medium.woff2') format('woff2'),
-         url('/src/fonts/Futura-Medium.woff') format('woff'),
-         url('/src/fonts/Futura-Medium.ttf') format('truetype');
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Futura Light';
-    src: url('/src/fonts/FuturaT-Ligh.woff2') format('woff2'),
-         url('/src/fonts/FuturaT-Ligh.woff') format('woff'),
-         url('/src/fonts/FuturaT-Ligh.ttf') format('truetype');
-    font-display: swap;
-}
-
 /* HEADER */
 
 .menu {
