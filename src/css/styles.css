@@ -707,7 +707,7 @@ footer .redRocket-text {
     /* HOME */
     .home-bg .redRocket-text {
         font-size: 4rem;
-        min-height: 6.5rem; 
+    /*  min-height: 6.5rem;  */
     }
 
     .redRocket-subtitle {
@@ -879,7 +879,7 @@ footer .redRocket-text {
 
     .home-bg .redRocket-text {
         font-size: 4.8rem;
-        min-height: 6.5rem;
+       /*  min-height: 6.5rem; */
     }
 
     .redRocket-subtitle {
@@ -1194,14 +1194,14 @@ footer .redRocket-text {
     /* HEADER 
     .redRocket-text {
         min-height: 6.5rem;
-} */
+    } */
 
     /* HOME */
     .home-bg .logo-img {
         width: 500px;
     }
 
-     /* ABOUT */
+    /* ABOUT */
     /*  #about .main-content {
         padding: 10rem 9rem;
     }
