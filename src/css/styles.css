@@ -9,6 +9,13 @@ body {
     font-size: 2rem; /* Usamos rem como pixel, equivale 16px */
 }
 
+@font-face {
+    font-family: 'Dash Horizon';
+    src: url('../fonts/Dash-Horizon-Demo.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 /* HEADER */
 
 .menu {
