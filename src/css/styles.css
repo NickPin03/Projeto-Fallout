@@ -34,7 +34,6 @@ body {
     padding-top: 0;
     padding-bottom: 0;
     height: 11rem;
-    line-height: 1.2; /* Ajuste conforme necessário */
 }
 
 .menu-icon {
@@ -61,7 +60,7 @@ nav ul li a {
 a.redRocket-text {
     display: block;
     text-decoration: none;
-    line-height: normal; /* Ajuste conforme necessário */
+    line-height: 1.8;
 }
 
 .purchase-btn {
@@ -531,7 +530,7 @@ footer .redRocket-text {
     /* HEADER */
     .menu-content {
         justify-content: center;
-        align-items: center;
+        align-items: unset;
     }
 
     .menu-icon {
@@ -687,10 +686,6 @@ footer .redRocket-text {
     }
 
     /* HEADER */
-    .redRocket-text {
-        min-height: 8rem;
-    }
-
     a.redRocket-text {
         font-size: 3.8rem;
     }
@@ -711,7 +706,7 @@ footer .redRocket-text {
     /* HOME */
     .home-bg .redRocket-text {
         font-size: 4rem;
-        min-height: 6.5rem;
+        min-height: 6.5rem; 
     }
 
     .redRocket-subtitle {
@@ -1038,10 +1033,10 @@ footer .redRocket-text {
 /* Celulares Grandes até Tablets Pequenos (APENAS) */
 @media (min-width: 480px) and (max-width: 767px) {
 
-     /*    HEADER 
+    /* HEADER 
     .redRocket-text {
-        min-height: 6.5rem;
-    } */
+        min-height: 6.5rem; 
+    } /*
 
     /* HOME */
     .home-bg .logo-img {
@@ -1196,9 +1191,9 @@ footer .redRocket-text {
 @media (min-width: 768px) and (max-width: 991px) {
 
     /* HEADER */
-    /* .redRocket-text {
+    .redRocket-text {
         min-height: 6.5rem;
-} */
+}
 
     /* HOME */
     .home-bg .logo-img {
