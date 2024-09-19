@@ -60,7 +60,8 @@ nav ul li a {
 a.redRocket-text {
     display: block;
     text-decoration: none;
-    line-height: 1.2;
+    margin-bottom: 2rem;
+    /* line-height: 1.2; */
 }
 
 .purchase-btn {
