@@ -530,7 +530,7 @@ footer .redRocket-text {
     /* HEADER */
     .menu-content {
         justify-content: center;
-        align-items: unset;
+        align-items: center;
     }
 
     .menu-icon {
@@ -1190,10 +1190,10 @@ footer .redRocket-text {
 /* Tablets Grandes (APENAS) */
 @media (min-width: 768px) and (max-width: 991px) {
 
-    /* HEADER */
+    /* HEADER 
     .redRocket-text {
         min-height: 6.5rem;
-}
+} */
 
     /* HOME */
     .home-bg .logo-img {
