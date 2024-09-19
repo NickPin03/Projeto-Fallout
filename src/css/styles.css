@@ -529,7 +529,7 @@ footer .redRocket-text {
     /* HEADER */
     .menu-content {
         justify-content: center;
-        align-items: unset;
+        align-items: center;
     }
 
     .menu-icon {
