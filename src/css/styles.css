@@ -695,6 +695,10 @@ footer .redRocket-text {
 
     /* HEADER */
 
+    h1 a img {
+        width: 17rem;
+    }
+
     .menu-content {
         height: 8rem;
     }
