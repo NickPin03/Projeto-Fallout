@@ -74,7 +74,7 @@ h1 a img {
 }
 
 .section.home-bg {
-    min-height: 92vh;
+    min-height: 94vh;
 }
 
 /* HOME */
@@ -85,8 +85,8 @@ h1 a img {
     /* background-size: cover; 
     background-position: center top; */
     position: relative;
-    background-size: 100vw 92vh;
-    margin-top: 8vh;
+    background-size: 100vw 94vh;
+    margin-top: 6vh;
     /* display: flex;
     flex-direction: column;
     justify-content: center;
@@ -119,12 +119,17 @@ h1 a img {
 }
 
 .redRocket-content {
-    margin-top: 1.2rem;
+    margin-top: 8rem;
 }
 
 .redRocket-blueBackground img {
     display: block;
     margin-bottom: -3px; /* Ajuste este valor conforme necessário */
+}
+
+.redRocket-blueBackground h2 img {
+    width: 55vw;
+    max-width: 40rem;
 }
 
 /* ABOUT */
@@ -511,7 +516,12 @@ footer .redRocket-text, .copyrightText {
 }
 
 footer .redRocket-text {
-    margin-top: 6rem;
+    margin: 2rem 0rem;
+}
+
+.flexImgFooter {
+    display: flex;
+    justify-content: center;
 }
 
 .copyrightText {
@@ -659,7 +669,7 @@ footer .redRocket-text {
     }
 
     .redRocket-content {
-        margin-top: 0px;
+        margin-top: 3rem;
     }
 
     .redRocket-blueBackground img {
